@@ -1,8 +1,15 @@
 #!/bin/sh
 
 #------------------------------------------------------------------+
-# PORTS COLLECTION
+# SQLite3 DATABASE
 #------------------------------------------------------------------+
 
-portsnap fetch   --interactive
-portsnap extract --interactive
+pkg install -y sqlite3
+
+#------------------------------------------------------------------+
+# NodeJS SERVER
+#------------------------------------------------------------------+
+
+pkg install -i npm
+
+cd /vagrant/server
