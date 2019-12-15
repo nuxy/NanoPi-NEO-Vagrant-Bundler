@@ -4,11 +4,11 @@
 Vagrant.configure("2") do |config|
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
-  config.hostmanager.aliases = %w(nanopi-neo.localhost api.nanopi-neo.localhost)
 
-  config.vm.box = "bento/freebsd-11"
+  config.vm.box = "generic/freebsd12"
   config.vm.guest = :freebsd
 
+  config.vm.hostname = "localhost"
   config.vm.network :private_network, ip: "1.9.7.3"
 
   config.vm.provider :vmware_workstation do |vmware|
