@@ -10,6 +10,6 @@ pkg install -y sqlite3
 # NodeJS SERVER
 #------------------------------------------------------------------+
 
-pkg install -i npm
+pkg install -y npm
 
 cd /vagrant/server
