@@ -15,3 +15,10 @@ pkg install -y sqlite3
 pkg install -y npm
 
 cd /vagrant/server
+npm install --python='/usr/local/bin/python2.7' > /dev/null 2>&1
+
+ln -s /vagrant/server /home/vagrant/server
+
+# Launch services.
+sudo -u vagrant npm run build
+sudo -u vagrant npm run start
