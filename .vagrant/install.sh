@@ -2,7 +2,7 @@
 
 echo 'ALTABI = "FreeBSD:12.0:amd64"' >> /usr/local/etc/pkg.conf
 
-pkg install -y git picocom screen
+pkg install -y ca_root_nss git picocom screen u-boot-tools
 
 # Install ports collection.
 portsnap fetch
