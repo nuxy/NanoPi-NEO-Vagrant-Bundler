@@ -4,6 +4,7 @@
 Vagrant.configure("2") do |config|
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
+  config.hostmanager.aliases = %w(api.nanopi-neo.localhost get.nanopi-neo.localhost)
 
   config.vm.box = "generic/freebsd12"
   config.vm.network :private_network, ip: "1.9.7.3"
@@ -12,7 +13,7 @@ Vagrant.configure("2") do |config|
     vmware.customize ["modifyvm", :id, "--cpus", 1]
     vmware.customize ["modifyvm", :id, "--memory", 2048]
 
-    # Support NanoPI/NEO MicroSD card development.
+    # Support NanoPi/NEO SD card development.
     vmware.vmx["ehci.present"] = "TRUE"
     vmware.vmx["usb.present"] = "TRUE"
     vmware.vmx["usb.autoConnect.device0"] = "path:1/1 autoclean:1"
