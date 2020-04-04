@@ -1,29 +1,28 @@
 #!/bin/sh
 
-echo 'ALTABI = "FreeBSD:12.0:amd64"' >> /usr/local/etc/pkg.conf
-
-pkg install -y ca_root_nss git picocom python3 screen u-boot-tools
-
-# Install ports collection.
-portsnap fetch
-portsnap extract
+pkg install -y ca_root_nss git picocom screen
 
 #------------------------------------------------------------------+
-# SQLite3 DATABASE
+# Qemu/Kernel
+#------------------------------------------------------------------+
+
+pkg install -y qemu-user-static u-boot-tools
+
+#------------------------------------------------------------------+
+# SQLite3
 #------------------------------------------------------------------+
 
 pkg install -y sqlite3
 
 #------------------------------------------------------------------+
-# NodeJS/Express SERVER
+# NodeJS/Express
 #------------------------------------------------------------------+
 
-pkg install -y npm
+pkg install -y node12 npm-node12 python3
 
-ln -s /vagrant/server /home/vagrant/server
-
+# Install NPM package.
 cd /vagrant/server
-npm install --no-optional > /dev/null 2>&1
+npm install --no-audit --no-optional > /dev/null 2>&1
 
 # Launch services.
 #screen -dm sudo -u vagrant npm run build ; npm run start
