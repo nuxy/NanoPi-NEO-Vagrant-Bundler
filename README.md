@@ -33,6 +33,10 @@ Resume the virtual machine session:
 
     $ vagrant resume
 
+Update the vagrant box to latest release:
+
+    $ vagrant box update
+
 Update project submodules:
 
     $ git submodule update --init --recursive
