@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.hostmanager.aliases = %w(api.nanopi-neo.localhost get.nanopi-neo.localhost)
 
   config.vm.box = "generic/freebsd12"
-  config.vm.network :private_network, ip: "1.9.7.3"
+  config.vm.network :private_network, ip: "192.168.56.100"
 
   config.vm.provider :vmware_desktop do |vmware|
     vmware.vmx["memsize"]  = 2048
@@ -25,5 +25,5 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", path: ".vagrant/install.sh"
-  config.vm.synced_folder ".", "/vagrant", type: "nfs"
+  config.vm.synced_folder ".", "/vagrant", type: "nfs", nfs_udp: false
 end
