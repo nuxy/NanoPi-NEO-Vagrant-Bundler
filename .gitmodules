@@ -1,0 +1,3 @@
+[submodule "sdcard"]
+	path = sdcard
+	url = https://github.com/nuxy/NanoPi-NEO-FreeBSD-SDcard
