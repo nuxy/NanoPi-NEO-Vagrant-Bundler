@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
   config.hostmanager.manage_host = true
   config.hostmanager.aliases = %w(api.nanopi-neo.localhost get.nanopi-neo.localhost)
 
-  config.vm.box = "generic/freebsd12"
+  config.vm.box = "generic/freebsd14"
   config.vm.network :private_network, ip: "192.168.56.100"
 
   config.vm.provider :vmware_desktop do |vmware|

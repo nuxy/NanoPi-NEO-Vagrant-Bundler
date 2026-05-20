@@ -5,4 +5,5 @@ if [ ! -e /dev/da1 ]; then
   exit 1
 fi
 
-pkg install -y ca_root_nss git screen
+# Install Guest OS dependencies.
+pkg install -y ca_root_nss git pcre2 screen subversion
