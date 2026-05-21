@@ -1,4 +1,4 @@
-# NanoPi-NEO-Vagrant-Bundler
+# NanoPi-NEO-Vagrant-Bundler [![NO AI](https://raw.githubusercontent.com/nuxy/no-ai-badge/master/badge.svg)](https://github.com/nuxy/no-ai-badge)
 
 OS independent [Vagrant](https://www.vagrantup.com) for the [NanoPi-NEO-FreeBSD-SDcard](https://github.com/nuxy/NanoPi-NEO-FreeBSD-SDcard) installer.
 
